@@ -1,13 +1,24 @@
 package com.immutableant.sfgdi;
 
+import com.immutableant.sfgdi.controllers.MyController;
+import java.util.Arrays;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class SfgDiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SfgDiApplication.class, args);
+		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+		Arrays.stream(ctx.getBeanDefinitionNames()).forEach(bean -> System.out.println(bean));
+
+		MyController myController = (MyController)  ctx.getBean("myController");
+
+		String greeting = myController.sayHello();
+
+		System.out.println(greeting);
 	}
 
 }
