@@ -1,6 +1,6 @@
-package guru.springframework.sfgdi.controllers;
+package com.immutableant.sfgdi.controllers;
 
-import guru.springframework.sfgdi.services.ConstructorGreetingService;
+import com.immutableant.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
