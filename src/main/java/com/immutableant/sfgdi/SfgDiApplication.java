@@ -1,6 +1,7 @@
 package com.immutableant.sfgdi;
 
 import com.immutableant.sfgdi.controllers.ConstructorInjectedController;
+import com.immutableant.sfgdi.controllers.I18nController;
 import com.immutableant.sfgdi.controllers.MyController;
 import com.immutableant.sfgdi.controllers.PropertyInjectedController;
 import com.immutableant.sfgdi.controllers.SetterInjectedController;
@@ -16,6 +17,12 @@ public class SfgDiApplication {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
 		Arrays.stream(ctx.getBeanDefinitionNames()).forEach(bean -> System.out.println(bean));
+
+		System.out.println("------ Profile Bean");
+
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+
+		System.out.println(i18nController.sayHello());
 
 		System.out.println("------ PRIMARY Bean");
 		MyController myController = (MyController)  ctx.getBean("myController");
