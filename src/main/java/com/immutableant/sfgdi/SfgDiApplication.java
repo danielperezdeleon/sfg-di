@@ -17,11 +17,10 @@ public class SfgDiApplication {
 
 		Arrays.stream(ctx.getBeanDefinitionNames()).forEach(bean -> System.out.println(bean));
 
+		System.out.println("------ PRIMARY Bean");
 		MyController myController = (MyController)  ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
-
-		System.out.println(greeting);
+		System.out.println(myController.sayHello());
 
 		System.out.println("------ Property based");
 
