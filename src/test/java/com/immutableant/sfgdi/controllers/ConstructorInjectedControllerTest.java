@@ -1,8 +1,6 @@
 package com.immutableant.sfgdi.controllers;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.immutableant.sfgdi.services.GreetingServiceImpl;
+import com.immutableant.sfgdi.services.ConstructorGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +10,7 @@ class ConstructorInjectedControllerTest {
 
   @BeforeEach
   void setUp() {
-    controller = new ConstructorInjectedController((new GreetingServiceImpl()));
+    controller = new ConstructorInjectedController((new ConstructorGreetingServiceImpl()));
   }
 
   @Test
