@@ -8,5 +8,4 @@ public class PropertyGreetingService implements GreetingService {
   public String sayGreeting() {
     return "Hello World! - Property";
   }
-
 }

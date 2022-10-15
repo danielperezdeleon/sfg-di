@@ -3,8 +3,7 @@ package com.immutableant.sfgdi.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SetterGreetingServiceImpl implements
-    GreetingService {
+public class SetterGreetingServiceImpl implements GreetingService {
 
   @Override
   public String sayGreeting() {
