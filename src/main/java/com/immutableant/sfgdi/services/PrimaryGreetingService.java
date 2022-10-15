@@ -3,8 +3,8 @@ package com.immutableant.sfgdi.services;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
-@Primary
+//@Service
+//@Primary
 public class PrimaryGreetingService implements GreetingService {
 
   @Override
